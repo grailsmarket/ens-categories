@@ -1,4 +1,4 @@
-Here are is the query used to fetch the list of words from https://query.wikidata.org/
+Here are is the query used to fetch the list of characters from https://query.wikidata.org/
 
 
 
