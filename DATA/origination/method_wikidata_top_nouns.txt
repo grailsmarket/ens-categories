@@ -1,0 +1,38 @@
+Here are is the query used to fetch the list of words from https://query.wikidata.org/
+
+
+
+
+PREFIX wd: <http://www.wikidata.org/entity/>                  # Wikidata entity namespace
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>            # Wikidata direct properties namespace
+PREFIX wikibase: <http://wikiba.se/ontology#>                 # Wikibase ontology namespace
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>          # RDF Schema namespace (for rdfs:label)
+
+SELECT ?tag ?bestEntity ?bestNameUsed ?bestSitelinks WHERE {   # Output columns
+  {                                                           # Start subquery block (for dedup)
+    SELECT ?tag                                               # Group key (dedup by normalized tag)
+           (MAX(?sitelinks) AS ?bestSitelinks)                # Keep the highest sitelink count per tag
+           (SAMPLE(?entity) AS ?bestEntity)                   # Pick one representative entity for the tag
+           (SAMPLE(?nameUsed) AS ?bestNameUsed)               # Pick one representative name for the tag
+    WHERE {                                                   # Start subquery pattern
+      VALUES ?class { wd:Q95074 }                              # The class to match against
+
+      ?entity wdt:P31/wdt:P279* ?class ;                       # Entity is an instance/subclass chain of the class
+              wikibase:sitelinks ?sitelinks .                  # Get the entity's sitelink count
+      FILTER(?sitelinks >= 25)                                 # Require at least 25 sitelinks
+
+      ?entity rdfs:label ?nameUsed .                           # Fetch labels
+      FILTER(LANG(?nameUsed) = "en")                           # Keep only English labels
+
+      FILTER(!REGEX(STR(?nameUsed), "\\s"))                    # Require one-word labels (no spaces)
+      FILTER(REGEX(STR(?nameUsed), "^[A-Za-z1-9]+$"))           # Require only A-Z/a-z/1-9 characters
+
+      BIND(LCASE(STR(?nameUsed)) AS ?tag)                      # Normalize label to lowercase tag
+
+      FILTER(STRLEN(?tag) >= 3 && STRLEN(?tag) <= 14)          # Enforce tag length range (min 3, max 14)
+      FILTER(REGEX(?tag, "^[a-z1-9]+$"))                       # Enforce final tag charset (a-z and 1-9 only)
+    }                                                          # End subquery pattern
+    GROUP BY ?tag                                              # Deduplicate by tag
+  }                                                            # End subquery block
+}
+ORDER BY DESC(?bestSitelinks)                                  # Sort by best sitelinks, highest first

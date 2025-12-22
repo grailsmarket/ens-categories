@@ -1,0 +1,73 @@
+Here are is the query used to fetch the list of words from https://query.wikidata.org/
+
+
+
+
+PREFIX wd: <http://www.wikidata.org/entity/>                 
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>           
+PREFIX dct: <http://purl.org/dc/terms/>                      
+PREFIX wikibase: <http://wikiba.se/ontology#>                
+PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>         
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>          
+PREFIX schema: <http://schema.org/>                          
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>           
+
+SELECT ?tag ?bestItem ?bestNameUsed ?bestSitelinks WHERE {
+  {
+    SELECT ?tag
+           (MAX(?sitelinks) AS ?bestSitelinks)
+           (SAMPLE(?item) AS ?bestItem)
+           (SAMPLE(?nameUsed) AS ?bestNameUsed)
+    WHERE {
+      ?lexeme dct:language wd:Q1860 ;
+              wikibase:lexicalCategory wd:Q1084 ;
+              ontolex:sense ?sense .
+
+      ?sense wdt:P5137 ?item .
+
+      ?item wikibase:sitelinks ?sitelinks .
+      FILTER(?sitelinks >= 100)                               # keep only items with at least 100 sitelinks
+
+      BIND(EXISTS { ?item wdt:P31 wd:Q16521 } AS ?isTaxon)
+
+      ?item rdfs:label ?itemLabelEn .
+      FILTER(LANG(?itemLabelEn) = "en")                       # keep only English item labels
+
+      OPTIONAL {
+        ?article schema:about ?item ;
+                 schema:isPartOf <https://en.wikipedia.org/> ;
+                 schema:name ?enwikiTitle .
+        FILTER(!REGEX(STR(?enwikiTitle), "\\s"))              # keep only one-word Wikipedia titles (no spaces)
+        FILTER(REGEX(STR(?enwikiTitle), "^[A-Za-z1-9]+$"))     # keep only titles made of A-Z/a-z/1-9 (no accents/punct/0)
+        BIND(?enwikiTitle AS ?taxonName1)
+      }
+
+      OPTIONAL {
+        ?item skos:altLabel ?altEn .
+        FILTER(LANG(?altEn) = "en")                           # keep only English aliases
+        FILTER(!REGEX(STR(?altEn), "\\s"))                    # keep only one-word aliases (no spaces)
+        FILTER(REGEX(STR(?altEn), "^[A-Za-z1-9]+$"))           # keep only aliases made of A-Z/a-z/1-9 (no accents/punct/0)
+        BIND(?altEn AS ?taxonName2)
+      }
+
+      FILTER(!?isTaxon || BOUND(?taxonName1) || BOUND(?taxonName2))   # if it's a taxon, require a usable title or alias
+
+      BIND(
+        IF(?isTaxon,
+           COALESCE(?taxonName1, ?taxonName2),
+           ?itemLabelEn
+        ) AS ?nameUsed
+      )
+
+      FILTER(!REGEX(STR(?nameUsed), "\\s"))                   # require the chosen name to be one word (no spaces)
+      FILTER(REGEX(STR(?nameUsed), "^[A-Za-z1-9]+$"))          # require the chosen name to already be valid characters
+
+      BIND(LCASE(STR(?nameUsed)) AS ?tag)
+
+      FILTER(STRLEN(?tag) >= 3 && STRLEN(?tag) <= 14)         # keep tags with length 3–14
+      FILTER(REGEX(?tag, "^[a-z1-9]+$"))                      # keep tags made only of a-z and digits 1-9
+    }
+    GROUP BY ?tag
+  }
+}
+ORDER BY DESC(?bestSitelinks)                                 # Sort by best sitelinks, highest first

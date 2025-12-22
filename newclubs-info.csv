@@ -1,0 +1,13 @@
+key,name,desc,avatar,header,data
+wikidata_top_fantasy_char,Top Fantasy,Most referenced fantasy characters are per wikidata (min sitelinks 20) [github],done,done,done
+wikidata_top_nouns,Top Nouns,"Most referenced nouns, per wikidata (min sitelinks 100) [github]",done,done,done
+english_adjectives,English Adjectives ,Common English adjectives,done,done,done
+periodic_table,Periodic Table,Periodic table elements,done,done,done
+bip_39,BIP 39 ,BIP 39 seedphrase words ,done,done,done
+un_countries,UN Countries,"Countries, as recorded by United Nations",done,done,done
+un_capital_cities,UN Capital Cities,"Capital Cities, as recorded by the United Nations",done,done,done
+prepunk_10k,Prepunk 10k,"The first 10,000 ENS names ever registered. Registered before the launch of Cryptopunks.",done,same as prepunk,done
+prepunk_1k,Prepunk 1k,"The first 1,000 ENS names ever registered. Registered before the launch of Cryptopunks.",done,same as prepunk,done
+prepunk_100,Prepunk 100,The first 100 ENS names ever registered. Registered before the launch of Cryptopunks.,done,same as prepunk,done
+ethmoji_99,Ethmoji 99,Ethmoji names from 00 to 99,done,same as ethmoji,done
+ethmoji_999,Ethmoji 999,Ethmoji names from 000 to 999,done,same as ethmoji,done
