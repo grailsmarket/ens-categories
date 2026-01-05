@@ -1,0 +1,477 @@
+city_name,normalized
+New York,newyork
+Los Angeles,losangeles
+Chicago,chicago
+Houston,houston
+Philadelphia,philadelphia
+Phoenix,phoenix
+San Antonio,sanantonio
+San Diego,sandiego
+Dallas,dallas
+San Jose,sanjose
+Austin,austin
+Indianapolis,indianapolis
+Jacksonville,jacksonville
+San Francisco,sanfrancisco
+Columbus,columbus
+Charlotte,charlotte
+Fort Worth,fortworth
+Detroit,detroit
+El Paso,elpaso
+Memphis,memphis
+Seattle,seattle
+Denver,denver
+Washington,washington
+Boston,boston
+Nashville-Davidson,nashville
+Baltimore,baltimore
+Oklahoma City,oklahomacity
+Louisville/Jefferson County,louisville
+Portland,portland
+Las Vegas,lasvegas
+Milwaukee,milwaukee
+Albuquerque,albuquerque
+Tucson,tucson
+Fresno,fresno
+Sacramento,sacramento
+Long Beach,longbeach
+Kansas City,kansascity
+Mesa,mesa
+Virginia Beach,virginiabeach
+Atlanta,atlanta
+Colorado Springs,coloradosprings
+Omaha,omaha
+Raleigh,raleigh
+Miami,miami
+Oakland,oakland
+Minneapolis,minneapolis
+Tulsa,tulsa
+Cleveland,cleveland
+Wichita,wichita
+Arlington,arlington
+New Orleans,neworleans
+Bakersfield,bakersfield
+Tampa,tampa
+Honolulu,honolulu
+Aurora,aurora
+Anaheim,anaheim
+Santa Ana,santaana
+St. Louis,stlouis
+Riverside,riverside
+Corpus Christi,corpuschristi
+Lexington-Fayette,lexington
+Pittsburgh,pittsburgh
+Anchorage,anchorage
+Stockton,stockton
+Cincinnati,cincinnati
+St. Paul,stpaul
+Toledo,toledo
+Greensboro,greensboro
+Newark,newark
+Plano,plano
+Henderson,henderson
+Lincoln,lincoln
+Buffalo,buffalo
+Jersey City,jerseycity
+Chula Vista,chulavista
+Fort Wayne,fortwayne
+Orlando,orlando
+St. Petersburg,stpetersburg
+Chandler,chandler
+Laredo,laredo
+Norfolk,norfolk
+Durham,durham
+Madison,madison
+Lubbock,lubbock
+Irvine,irvine
+Winston-Salem,winstonsalem
+Glendale,glendale
+Garland,garland
+Hialeah,hialeah
+Reno,reno
+Chesapeake,chesapeake
+Gilbert,gilbert
+Baton Rouge,batonrouge
+Irving,irving
+Scottsdale,scottsdale
+North Las Vegas,northlasvegas
+Fremont,fremont
+Boise City,boisecity
+Richmond,richmond
+San Bernardino,sanbernardino
+Birmingham,birmingham
+Spokane,spokane
+Rochester,rochester
+Des Moines,desmoines
+Modesto,modesto
+Fayetteville,fayetteville
+Tacoma,tacoma
+Oxnard,oxnard
+Fontana,fontana
+Montgomery,montgomery
+Moreno Valley,morenovalley
+Shreveport,shreveport
+Yonkers,yonkers
+Akron,akron
+Huntington Beach,huntingtonbeach
+Little Rock,littlerock
+Augusta-Richmond County,augusta
+Amarillo,amarillo
+Mobile,mobile
+Grand Rapids,grandrapids
+Salt Lake City,saltlakecity
+Tallahassee,tallahassee
+Huntsville,huntsville
+Grand Prairie,grandprairie
+Knoxville,knoxville
+Worcester,worcester
+Newport News,newportnews
+Brownsville,brownsville
+Overland Park,overlandpark
+Santa Clarita,santaclarita
+Providence,providence
+Garden Grove,gardengrove
+Chattanooga,chattanooga
+Oceanside,oceanside
+Jackson,jackson
+Fort Lauderdale,fortlauderdale
+Santa Rosa,santarosa
+Rancho Cucamonga,ranchocucamonga
+Port St. Lucie,portstlucie
+Tempe,tempe
+Ontario,ontario
+Vancouver,vancouver
+Cape Coral,capecoral
+Sioux Falls,siouxfalls
+Springfield,springfield
+Peoria,peoria
+Pembroke Pines,pembrokepines
+Elk Grove,elkgrove
+Salem,salem
+Lancaster,lancaster
+Corona,corona
+Eugene,eugene
+Palmdale,palmdale
+Salinas,salinas
+Pasadena,pasadena
+Fort Collins,fortcollins
+Hayward,hayward
+Pomona,pomona
+Cary,cary
+Rockford,rockford
+Alexandria,alexandria
+Escondido,escondido
+McKinney,mckinney
+Joliet,joliet
+Sunnyvale,sunnyvale
+Torrance,torrance
+Bridgeport,bridgeport
+Lakewood,lakewood
+Hollywood,hollywood
+Paterson,paterson
+Naperville,naperville
+Syracuse,syracuse
+Mesquite,mesquite
+Dayton,dayton
+Savannah,savannah
+Clarksville,clarksville
+Orange,orange
+Fullerton,fullerton
+Killeen,killeen
+Frisco,frisco
+Hampton,hampton
+McAllen,mcallen
+Warren,warren
+Bellevue,bellevue
+West Valley City,westvalleycity
+Columbia,columbia
+Olathe,olathe
+Sterling Heights,sterlingheights
+New Haven,newhaven
+Miramar,miramar
+Waco,waco
+Thousand Oaks,thousandoaks
+Cedar Rapids,cedarrapids
+Charleston,charleston
+Visalia,visalia
+Topeka,topeka
+Elizabeth,elizabeth
+Gainesville,gainesville
+Thornton,thornton
+Roseville,roseville
+Carrollton,carrollton
+Coral Springs,coralsprings
+Stamford,stamford
+Simi Valley,simivalley
+Concord,concord
+Hartford,hartford
+Kent,kent
+Lafayette,lafayette
+Midland,midland
+Surprise,surprise
+Denton,denton
+Victorville,victorville
+Evansville,evansville
+Santa Clara,santaclara
+Abilene,abilene
+Athens-Clarke County,athens
+Vallejo,vallejo
+Allentown,allentown
+Norman,norman
+Beaumont,beaumont
+Independence,independence
+Murfreesboro,murfreesboro
+Ann Arbor,annarbor
+Berkeley,berkeley
+Provo,provo
+El Monte,elmonte
+Lansing,lansing
+Fargo,fargo
+Downey,downey
+Costa Mesa,costamesa
+Wilmington,wilmington
+Arvada,arvada
+Inglewood,inglewood
+Miami Gardens,miamigardens
+Carlsbad,carlsbad
+Westminster,westminster
+Odessa,odessa
+Manchester,manchester
+Elgin,elgin
+West Jordan,westjordan
+Round Rock,roundrock
+Clearwater,clearwater
+Waterbury,waterbury
+Gresham,gresham
+Fairfield,fairfield
+Billings,billings
+Lowell,lowell
+San Buenaventura (Ventura),ventura
+Pueblo,pueblo
+High Point,highpoint
+West Covina,westcovina
+Murrieta,murrieta
+Cambridge,cambridge
+Antioch,antioch
+Temecula,temecula
+Norwalk,norwalk
+Centennial,centennial
+Everett,everett
+Palm Bay,palmbay
+Wichita Falls,wichitafalls
+Green Bay,greenbay
+Daly City,dalycity
+Burbank,burbank
+Richardson,richardson
+Pompano Beach,pompanobeach
+North Charleston,northcharleston
+Broken Arrow,brokenarrow
+Boulder,boulder
+West Palm Beach,westpalmbeach
+Santa Maria,santamaria
+El Cajon,elcajon
+Davenport,davenport
+Rialto,rialto
+Las Cruces,lascruces
+San Mateo,sanmateo
+Lewisville,lewisville
+South Bend,southbend
+Lakeland,lakeland
+Erie,erie
+Tyler,tyler
+Pearland,pearland
+College Station,collegestation
+Kenosha,kenosha
+Sandy Springs,sandysprings
+Clovis,clovis
+Flint,flint
+Roanoke,roanoke
+Albany,albany
+Jurupa Valley,jurupavalley
+Compton,compton
+San Angelo,sanangelo
+Hillsboro,hillsboro
+Lawton,lawton
+Renton,renton
+Vista,vista
+Davie,davie
+Greeley,greeley
+Mission Viejo,missionviejo
+Portsmouth,portsmouth
+Dearborn,dearborn
+South Gate,southgate
+Tuscaloosa,tuscaloosa
+Livonia,livonia
+New Bedford,newbedford
+Vacaville,vacaville
+Brockton,brockton
+Roswell,roswell
+Beaverton,beaverton
+Quincy,quincy
+Sparks,sparks
+Yakima,yakima
+Lee's Summit,leessummit
+Federal Way,federalway
+Carson,carson
+Santa Monica,santamonica
+Hesperia,hesperia
+Allen,allen
+Rio Rancho,riorancho
+Yuma,yuma
+Orem,orem
+Lynn,lynn
+Redding,redding
+Spokane Valley,spokanevalley
+Miami Beach,miamibeach
+League City,leaguecity
+Lawrence,lawrence
+Santa Barbara,santabarbara
+Plantation,plantation
+Sandy,sandy
+Sunrise,sunrise
+Macon,macon
+Longmont,longmont
+Boca Raton,bocaraton
+San Marcos,sanmarcos
+Greenville,greenville
+Waukegan,waukegan
+Fall River,fallriver
+Chico,chico
+Newton,newton
+San Leandro,sanleandro
+Reading,reading
+Fort Smith,fortsmith
+Newport Beach,newportbeach
+Asheville,asheville
+Nashua,nashua
+Edmond,edmond
+Whittier,whittier
+Nampa,nampa
+Bloomington,bloomington
+Deltona,deltona
+Hawthorne,hawthorne
+Duluth,duluth
+Carmel,carmel
+Suffolk,suffolk
+Clifton,clifton
+Citrus Heights,citrusheights
+Livermore,livermore
+Tracy,tracy
+Alhambra,alhambra
+Kirkland,kirkland
+Trenton,trenton
+Ogden,ogden
+Hoover,hoover
+Cicero,cicero
+Fishers,fishers
+Sugar Land,sugarland
+Danbury,danbury
+Meridian,meridian
+Indio,indio
+Menifee,menifee
+Champaign,champaign
+Buena Park,buenapark
+Troy,troy
+O'Fallon,ofallon
+Johns Creek,johnscreek
+Bellingham,bellingham
+Westland,westland
+Sioux City,siouxcity
+Warwick,warwick
+Hemet,hemet
+Longview,longview
+Farmington Hills,farmingtonhills
+Bend,bend
+Merced,merced
+Mission,mission
+Chino,chino
+Redwood City,redwoodcity
+Edinburg,edinburg
+Cranston,cranston
+Parma,parma
+New Rochelle,newrochelle
+Lake Forest,lakeforest
+Napa,napa
+Hammond,hammond
+Avondale,avondale
+Somerville,somerville
+Palm Coast,palmcoast
+Bryan,bryan
+Gary,gary
+Largo,largo
+Brooklyn Park,brooklynpark
+Tustin,tustin
+Racine,racine
+Deerfield Beach,deerfieldbeach
+Lynchburg,lynchburg
+Mountain View,mountainview
+Medford,medford
+Bellflower,bellflower
+Melbourne,melbourne
+St. Joseph,stjoseph
+Camden,camden
+St. George,stgeorge
+Kennewick,kennewick
+Baldwin Park,baldwinpark
+Chino Hills,chinohills
+Alameda,alameda
+Arlington Heights,arlingtonheights
+Scranton,scranton
+Evanston,evanston
+Kalamazoo,kalamazoo
+Baytown,baytown
+Upland,upland
+Springdale,springdale
+Bethlehem,bethlehem
+Schaumburg,schaumburg
+Mount Pleasant,mountpleasant
+Auburn,auburn
+Decatur,decatur
+San Ramon,sanramon
+Pleasanton,pleasanton
+Wyoming,wyoming
+Lake Charles,lakecharles
+Plymouth,plymouth
+Bolingbrook,bolingbrook
+Pharr,pharr
+Appleton,appleton
+Gastonia,gastonia
+Folsom,folsom
+Southfield,southfield
+Rochester Hills,rochesterhills
+New Britain,newbritain
+Goodyear,goodyear
+Canton,canton
+Warner Robins,warnerrobins
+Union City,unioncity
+Perris,perris
+Manteca,manteca
+Iowa City,iowacity
+Jonesboro,jonesboro
+Lynwood,lynwood
+Loveland,loveland
+Pawtucket,pawtucket
+Boynton Beach,boyntonbeach
+Waukesha,waukesha
+Gulfport,gulfport
+Apple Valley,applevalley
+Passaic,passaic
+Rapid City,rapidcity
+Layton,layton
+Turlock,turlock
+Muncie,muncie
+Temple,temple
+Missouri City,missouricity
+Redlands,redlands
+Santa Fe,santafe
+Lauderhill,lauderhill
+Milpitas,milpitas
+Palatine,palatine
+Missoula,missoula
+Rock Hill,rockhill
+Franklin,franklin
+Flagstaff,flagstaff
+Flower Mound,flowermound
+Weston,weston
+Waterloo,waterloo
+Mount Vernon,mountvernon
